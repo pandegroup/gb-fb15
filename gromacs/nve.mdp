@@ -1,0 +1,39 @@
+; use double precision
+
+integrator = md
+nsteps = 100000
+dt = 0.001
+
+nstxout = 500
+nstenergy = 500
+nstlog = 500
+nstvout = 500
+nstxtcout = 0
+
+ns_type = grid
+nstlist = 5
+rlist = 1.2
+rcoulomb = 1.2
+rvdw = 1.2
+coulombtype = PME
+pme_order = 4
+fourierspacing = 0.16
+
+tcoupl          = no
+pcoupl          = no
+
+nstcomm = 1
+comm-mode = Linear
+comm-grps = Water non-Water
+
+pbc = xyz
+DispCorr = EnerPres
+gen_vel = no
+
+constraint_algorithm = lincs
+constraints = all-bonds
+lincs_iter = 2
+lincs_order = 4
+nstfout              = 0
+vdwtype              = switch
+rvdw_switch          = 0.90

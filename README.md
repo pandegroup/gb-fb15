@@ -12,3 +12,5 @@ cd gromacs
 grompp -f npt.mdp -c ic.gro -p lipid.top -o ic_npt.tpr
 mdrun -deffnm ic_npt
 ```
+### Details
+10.1021/acs.jctc.6b00801
